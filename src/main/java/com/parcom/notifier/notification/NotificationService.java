@@ -16,9 +16,14 @@ public class NotificationService {
     void send(NotificationAgentDto notificationDto) {
 
         User user = userService.getById(notificationDto.getIdUserReciever());
-        log.info("Send email to \"{}\" ",user.getEmail());
-        log.info("Type:  \"{}\" Title: \" {}\"",notificationDto.getNotificationType(),notificationDto.getTitle());
-        log.info("Message:  \"{}\"",notificationDto.getMessage());
+        if (user.getEmail() != null) {
+
+            log.info("Send email to \"{}\" ",user.getEmail());
+            log.info("Type:  \"{}\" Title: \" {}\"",notificationDto.getNotificationType(),notificationDto.getTitle());
+            log.info("Message:  \"{}\"",notificationDto.getMessage());
+        }
+        else
+            log.info("Can't send email for user id  {}. Email field is empty",user.getId());
 
 
     }
