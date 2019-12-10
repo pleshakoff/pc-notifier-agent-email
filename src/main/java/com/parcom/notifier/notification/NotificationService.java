@@ -16,7 +16,7 @@ public class NotificationService {
     void send(NotificationAgentDto notificationDto) {
 
         User user = userService.getById(notificationDto.getIdUserReciever());
-        log.info("Send notification to email {}",user.getEmail());
+        log.info("Send email to \"{}\" ",user.getEmail());
         log.info("Type:  \"{}\" Title: \" {}\"",notificationDto.getNotificationType(),notificationDto.getTitle());
         log.info("Message:  \"{}\"",notificationDto.getMessage());
 

@@ -22,12 +22,13 @@ public class NotificationController {
 
     @PostMapping("/")
     @ApiOperation(value = "Send notification")
-    public void create(@RequestBody NotificationAgentDto notificationAgentDto,
+    public String create(@RequestBody NotificationAgentDto notificationAgentDto,
                        BindingResult bindingResult) throws BindException {
         if (bindingResult.hasErrors()) {
             throw new BindException(bindingResult);
         }
         notificationService.send(notificationAgentDto);
+        return "Done";
     }
 
 
