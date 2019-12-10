@@ -28,7 +28,7 @@ public class NotificationController {
             throw new BindException(bindingResult);
         }
         notificationService.send(notificationAgentDto);
-        return "Done";
+        return "{\"result\": \"done\"}";
     }
 
 
