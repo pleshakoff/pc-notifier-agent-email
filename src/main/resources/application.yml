@@ -1,0 +1,15 @@
+server:
+  port : 8084
+
+parcom:
+  services:
+    classroom:
+      host: 127.0.0.1
+      port: 8080
+spring:
+  application.name: pc-notifier
+  hateoas:
+    use-hal-as-default-json-media-type: false
+  data:
+    rest:
+      detection-strategy: annotated
