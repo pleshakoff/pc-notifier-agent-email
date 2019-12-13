@@ -1,12 +1,10 @@
-package com.parcom.notifier;
+package com.parcom.notifier_agent_email;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 import springfox.documentation.builders.ParameterBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -21,10 +19,10 @@ import java.util.Arrays;
 @SpringBootApplication
 @EnableSwagger2WebMvc
 @Import(SpringDataRestConfiguration.class)
-public class NotifierApplication {
+public class NotifierAgentEmailApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NotifierApplication.class, args);
+		SpringApplication.run(NotifierAgentEmailApplication.class, args);
 	}
 
 
@@ -44,10 +42,6 @@ public class NotifierApplication {
 				.build();
 	}
 
-	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
-		return builder.build();
-	}
 
 }
 

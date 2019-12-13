@@ -7,7 +7,7 @@ parcom:
       host: pc-classroom
       port: 8080
 spring:
-  application.name: pc-notifier
+  application.name: pc-notifier_agent_email
   hateoas:
     use-hal-as-default-json-media-type: false
   data:
