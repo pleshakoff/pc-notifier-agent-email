@@ -17,8 +17,7 @@ public class NotificationAgentDto  {
 
     private final String  message;
 
-    private final @NotNull
-    String idObjectSender;
+    private final @NotNull String idObjectSender;
 
     @NotNull
     private final Long idUserSender;
