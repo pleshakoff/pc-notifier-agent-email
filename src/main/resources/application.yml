@@ -8,14 +8,11 @@ parcom:
     version: v1
   services:
     -
-      name: classroom
-      host: pc-classroom
-      port: 8080
+      name: user-cache
+      host: pc-user-cache
+      port: 8086
       version: v1
 spring:
   application.name: pc-notifier_agent_email
   hateoas:
     use-hal-as-default-json-media-type: false
-  data:
-    rest:
-      detection-strategy: annotated

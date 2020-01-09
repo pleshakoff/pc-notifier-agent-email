@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getById(Long id){
-        return network.callGet("classroom",User.class,"users").getBody();
+        return network.callGet("user-cache",User.class,"users",id.toString()).getBody();
     }
 
 
