@@ -1,6 +1,7 @@
 package com.parcom.notifier_agent_email.notification;
 
 
+import com.parcom.asyncdto.NotificationAgentDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
